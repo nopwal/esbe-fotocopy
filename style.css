@@ -33,7 +33,8 @@ nav span{
 }
 
 nav ul{
-    display: flex;   
+    display: flex;  
+    margin: 0px 90px;
 }
 
 nav ul li{
@@ -81,7 +82,17 @@ nav ul li a.active {
     background-color: #37acfa;    
 }
 
+#nav-button {
+    display: none;
+}
 
+label{
+    display: none;
+}
+
+label:hover{
+    color: #37acfa;
+}
 
 @media screen and (max-width: 860px){
     nav{
@@ -100,14 +111,38 @@ nav ul li a.active {
 @media screen and (max-width: 600px){
     nav{
         background-color: white;
+        /* position: fixed; */
+        display: block;
     }
 
-    .navlinks{
-        display: none;
+    nav .navlinks ul{
+        display: block;
+        background-color: #fdfeff77;
+        height: 100%;
+        margin: 0px
+    }
+    
+
+    nav .button{
+    font-size: 22px;
+    padding: 5px 10px;
+    margin: 7px !important;
+    background-color: #37acfa;
     }
 
-    nav button{
+    label{
+        display: block;
+        position: absolute;
+        font-size: 24px;
+        padding: 10px;
+        right: 2%;
+        cursor: pointer;
+    }
+
+    nav #nav-button:checked~.navlinks{
         display: none;
+        max-height: 100%;
+        transition: all 1s ease-out;
     }
 
     /* #home{
@@ -126,7 +161,7 @@ nav ul li a.active {
 
     #home img{
         width: 330px !important;
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     #home .text-item h1{
@@ -140,6 +175,15 @@ nav ul li a.active {
 
     #home .text-item p{
         display: none;
+    }
+
+    #about{
+        padding: 0px 0px !important;
+    }
+
+    #about p{
+        font-size: 1.2rem !important;
+        padding: 20px !important;
     }
 
     #product .container-card{
@@ -161,6 +205,9 @@ nav ul li a.active {
         width: 100%;
     }
 
+    footer p{
+        font-size: 14px;
+    }
 }
 
 /* hamburger menu */
@@ -255,6 +302,7 @@ nav .menu-toggle {
 /* ------------ About ------------ */
 #about{
     width: 100%;
+    padding: 0 400px;
     height: 20%;
     display: flex;  
     background: linear-gradient(#6fb9ea, #02b1e1a1);
@@ -281,7 +329,7 @@ nav .menu-toggle {
 #about p{
     color: black;
     padding: 24px 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -290,7 +338,7 @@ nav .menu-toggle {
 #about p span{
     font-size: larger;
     color: #1f9deb;
-    line-height: 3rem;
+    line-height: rem;
     text-shadow: 1.5px 1.5px 4px#fdfeff;
 }
 /* end about */
@@ -468,6 +516,7 @@ footer{
 }
 
 footer p{
+    color: #434344;
     margin: 7px;
     font-weight: 900;
 }
